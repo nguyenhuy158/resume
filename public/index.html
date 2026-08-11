@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
 <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Nguyen Gia Huy — Backend Developer">
 <meta property="og:description" content="Resume / CV — Backend Developer & DevOps.">
-<meta property="og:url" content="https://resume.huyab.click">
+<meta property="og:url" content="https://cv.huyab.click">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
 <script src="https://cdn.tailwindcss.com"></script>
 <style type="text/tailwindcss">
@@ -31,19 +31,29 @@
 
 <body class="m-0 bg-slate-100 font-sans text-slate-800 antialiased">
 
-<!-- Nút in PDF: ẩn khi in -->
+<!-- Thanh công cụ: ẩn khi in -->
 <div class="no-print sticky top-0 z-10 flex justify-end gap-2 bg-slate-100/80 px-4 py-3 backdrop-blur">
   <button onclick="window.print()"
-    class="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow transition hover:bg-indigo-700">
-    In / Lưu PDF
-  </button>
+    class="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow transition hover:bg-indigo-700"
+    data-i18n="print">Print / Save PDF</button>
 </div>
+
+<!-- Nút đổi ngôn ngữ, neo mép phải màn hình -->
+<button id="lang-toggle" type="button"
+  class="no-print fixed right-0 top-1/2 z-20 flex -translate-y-1/2 items-center gap-2 rounded-l-full bg-amber-600 py-3 pl-4 pr-5 text-sm font-semibold text-white shadow-lg transition hover:bg-amber-700">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 shrink-0">
+    <path d="M4 9h13l-3-3" />
+    <path d="M20 15H7l3 3" />
+  </svg>
+  <span id="lang-label">VI</span>
+</button>
 
 <main class="sheet mx-auto max-w-[900px] bg-white px-6 py-8 shadow-sm sm:px-10 sm:py-12">
 
   <header class="border-b-2 border-slate-200 pb-5">
     <h1 class="m-0 text-3xl font-bold uppercase tracking-wide sm:text-[34px]">Nguyen Gia Huy</h1>
-    <div class="mt-1 text-base text-slate-500 sm:text-lg">Backend Developer &middot; DevOps</div>
+    <div class="mt-1 text-base text-slate-500 sm:text-lg" data-i18n="role">Backend Developer &middot; DevOps</div>
 
     <div class="mt-4 flex flex-col gap-2 text-sm leading-6 text-slate-600 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4">
       <a href="mailto:huy.ntq02@gmail.com" class="transition hover:text-indigo-600">huy.ntq02@gmail.com</a>
@@ -52,46 +62,46 @@
       <span class="hidden text-slate-300 sm:inline">|</span>
       <a href="https://github.com/nguyenhuy158" class="transition hover:text-indigo-600">github.com/nguyenhuy158</a>
       <span class="hidden text-slate-300 sm:inline">|</span>
-      <span>Ho Chi Minh City, Vietnam</span>
+      <span data-i18n="location">Ho Chi Minh City, Vietnam</span>
     </div>
   </header>
 
   <section class="mt-6 avoid-break">
-    <h2 class="section-title">Giới thiệu</h2>
-    <p class="text-sm leading-6 text-slate-700">
-      TODO: 2–3 câu tóm tắt — số năm kinh nghiệm, mảng mạnh nhất, thứ đang tìm kiếm.
+    <h2 class="section-title" data-i18n="summaryTitle">Summary</h2>
+    <p class="text-sm leading-6 text-slate-700" data-i18n="summaryBody">
+      TODO: 2–3 sentences — years of experience, strongest area, what you are looking for.
     </p>
   </section>
 
   <section class="mt-6">
-    <h2 class="section-title">Kinh nghiệm</h2>
+    <h2 class="section-title" data-i18n="experienceTitle">Experience</h2>
 
     <div class="avoid-break mb-5">
       <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-        <h3 class="m-0 text-base font-semibold">Chức danh — Công ty</h3>
-        <span class="text-xs text-slate-500">MM/YYYY – Hiện tại</span>
+        <h3 class="m-0 text-base font-semibold" data-i18n="job1Title">Job title — Company</h3>
+        <span class="text-xs text-slate-500" data-i18n="job1Date">MM/YYYY – Present</span>
       </div>
       <ul class="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-700">
-        <li>TODO: việc đã làm + kết quả đo được (con số càng tốt).</li>
-        <li>TODO: công nghệ chính đã dùng.</li>
+        <li data-i18n="job1Bullet1">TODO: what you did + measurable result.</li>
+        <li data-i18n="job1Bullet2">TODO: main technologies used.</li>
       </ul>
     </div>
 
     <div class="avoid-break mb-5">
       <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-        <h3 class="m-0 text-base font-semibold">Chức danh — Công ty trước</h3>
+        <h3 class="m-0 text-base font-semibold" data-i18n="job2Title">Job title — Previous company</h3>
         <span class="text-xs text-slate-500">MM/YYYY – MM/YYYY</span>
       </div>
       <ul class="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-700">
-        <li>TODO</li>
+        <li data-i18n="job2Bullet1">TODO</li>
       </ul>
     </div>
   </section>
 
   <section class="mt-6 avoid-break">
-    <h2 class="section-title">Kỹ năng</h2>
+    <h2 class="section-title" data-i18n="skillsTitle">Skills</h2>
     <dl class="grid grid-cols-1 gap-x-6 gap-y-2 text-sm sm:grid-cols-[140px_1fr]">
-      <dt class="font-semibold text-slate-600">Ngôn ngữ</dt>
+      <dt class="font-semibold text-slate-600" data-i18n="skillLangs">Languages</dt>
       <dd class="m-0 text-slate-700">TODO: Python, JavaScript/TypeScript, ...</dd>
       <dt class="font-semibold text-slate-600">Backend</dt>
       <dd class="m-0 text-slate-700">TODO: Odoo, FastAPI, Hono, PostgreSQL, ...</dd>
@@ -101,20 +111,20 @@
   </section>
 
   <section class="mt-6">
-    <h2 class="section-title">Dự án</h2>
+    <h2 class="section-title" data-i18n="projectsTitle">Projects</h2>
     <div class="avoid-break mb-4">
       <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-        <h3 class="m-0 text-base font-semibold">Tên dự án</h3>
-        <a href="#" class="text-xs text-indigo-600">link</a>
+        <h3 class="m-0 text-base font-semibold" data-i18n="project1Title">Project name</h3>
+        <a href="#" class="text-xs text-indigo-600" data-i18n="linkLabel">link</a>
       </div>
-      <p class="mt-1 text-sm leading-6 text-slate-700">TODO: 1–2 câu mô tả + stack.</p>
+      <p class="mt-1 text-sm leading-6 text-slate-700" data-i18n="project1Body">TODO: 1–2 sentences + stack.</p>
     </div>
   </section>
 
   <section class="mt-6 avoid-break">
-    <h2 class="section-title">Học vấn</h2>
+    <h2 class="section-title" data-i18n="educationTitle">Education</h2>
     <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-      <h3 class="m-0 text-base font-semibold">Trường — Ngành</h3>
+      <h3 class="m-0 text-base font-semibold" data-i18n="school">University — Major</h3>
       <span class="text-xs text-slate-500">YYYY – YYYY</span>
     </div>
   </section>
@@ -122,10 +132,84 @@
 </main>
 
 <footer class="no-print py-6 text-center text-xs text-slate-400">
-  Cập nhật lần cuối: <span id="updated">—</span>
+  <span data-i18n="updated">Last updated:</span> <span id="updated">—</span>
 </footer>
 
 <script>
+  const I18N = {
+    en: {
+      docTitle: 'Nguyen Gia Huy — Backend Developer',
+      print: 'Print / Save PDF',
+      role: 'Backend Developer · DevOps',
+      location: 'Ho Chi Minh City, Vietnam',
+      summaryTitle: 'Summary',
+      summaryBody: 'TODO: 2–3 sentences — years of experience, strongest area, what you are looking for.',
+      experienceTitle: 'Experience',
+      job1Title: 'Job title — Company',
+      job1Date: 'MM/YYYY – Present',
+      job1Bullet1: 'TODO: what you did + measurable result.',
+      job1Bullet2: 'TODO: main technologies used.',
+      job2Title: 'Job title — Previous company',
+      job2Bullet1: 'TODO',
+      skillsTitle: 'Skills',
+      skillLangs: 'Languages',
+      projectsTitle: 'Projects',
+      project1Title: 'Project name',
+      project1Body: 'TODO: 1–2 sentences + stack.',
+      linkLabel: 'link',
+      educationTitle: 'Education',
+      school: 'University — Major',
+      updated: 'Last updated:',
+    },
+    vi: {
+      docTitle: 'Nguyen Gia Huy — Lập trình viên Backend',
+      print: 'In / Lưu PDF',
+      role: 'Lập trình viên Backend · DevOps',
+      location: 'TP. Hồ Chí Minh, Việt Nam',
+      summaryTitle: 'Giới thiệu',
+      summaryBody: 'TODO: 2–3 câu — số năm kinh nghiệm, mảng mạnh nhất, thứ đang tìm kiếm.',
+      experienceTitle: 'Kinh nghiệm',
+      job1Title: 'Chức danh — Công ty',
+      job1Date: 'MM/YYYY – Hiện tại',
+      job1Bullet1: 'TODO: việc đã làm + kết quả đo được.',
+      job1Bullet2: 'TODO: công nghệ chính đã dùng.',
+      job2Title: 'Chức danh — Công ty trước',
+      job2Bullet1: 'TODO',
+      skillsTitle: 'Kỹ năng',
+      skillLangs: 'Ngôn ngữ',
+      projectsTitle: 'Dự án',
+      project1Title: 'Tên dự án',
+      project1Body: 'TODO: 1–2 câu mô tả + stack.',
+      linkLabel: 'liên kết',
+      educationTitle: 'Học vấn',
+      school: 'Trường — Ngành',
+      updated: 'Cập nhật lần cuối:',
+    },
+  };
+
+  const STORAGE_KEY = 'resume-lang';
+
+  function applyLang(lang) {
+    const dict = I18N[lang];
+    document.documentElement.lang = lang;
+    document.title = dict.docTitle;
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      const value = dict[el.dataset.i18n];
+      if (value !== undefined) el.textContent = value;
+    });
+    // Nút hiển thị ngôn ngữ sẽ chuyển sang, không phải ngôn ngữ hiện tại.
+    document.getElementById('lang-label').textContent = lang === 'en' ? 'VI' : 'EN';
+    localStorage.setItem(STORAGE_KEY, lang);
+  }
+
+  let current = localStorage.getItem(STORAGE_KEY) === 'vi' ? 'vi' : 'en';
+  applyLang(current);
+
+  document.getElementById('lang-toggle').addEventListener('click', () => {
+    current = current === 'en' ? 'vi' : 'en';
+    applyLang(current);
+  });
+
   document.getElementById('updated').textContent = document.lastModified;
 </script>
 
