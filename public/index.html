@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nguyen Gia Huy — Backend Developer</title>
+<meta name="description" content="Resume / CV — Backend Developer & DevOps.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<style type="text/tailwindcss">
+  @layer utilities {
+    .section-title {
+      @apply mb-3 border-b border-slate-200 pb-1 text-sm font-bold uppercase tracking-[0.15em] text-indigo-700;
+    }
+  }
+  @media print {
+    @page { size: A4; margin: 12mm; }
+    html, body { background: #fff !important; }
+    .no-print { display: none !important; }
+    .sheet { box-shadow: none !important; margin: 0 !important; padding: 0 !important; max-width: none !important; }
+    a { text-decoration: none !important; color: inherit !important; }
+    .avoid-break { break-inside: avoid; }
+  }
+</style>
+</head>
+
+<body class="m-0 bg-slate-100 font-sans text-slate-800 antialiased">
+
+<!-- Nút in PDF: ẩn khi in -->
+<div class="no-print sticky top-0 z-10 flex justify-end gap-2 bg-slate-100/80 px-4 py-3 backdrop-blur">
+  <button onclick="window.print()"
+    class="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow transition hover:bg-indigo-700">
+    In / Lưu PDF
+  </button>
+</div>
+
+<main class="sheet mx-auto max-w-[900px] bg-white px-6 py-8 shadow-sm sm:px-10 sm:py-12">
+
+  <header class="border-b-2 border-slate-200 pb-5">
+    <h1 class="m-0 text-3xl font-bold uppercase tracking-wide sm:text-[34px]">Nguyen Gia Huy</h1>
+    <div class="mt-1 text-base text-slate-500 sm:text-lg">Backend Developer &middot; DevOps</div>
+
+    <div class="mt-4 flex flex-col gap-2 text-sm leading-6 text-slate-600 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4">
+      <a href="mailto:huy.nguyen@techcoop.vn" class="transition hover:text-indigo-600">huy.nguyen@techcoop.vn</a>
+      <span class="hidden text-slate-300 sm:inline">|</span>
+      <a href="tel:+84000000000" class="transition hover:text-indigo-600">+84 000 000 000</a>
+      <span class="hidden text-slate-300 sm:inline">|</span>
+      <a href="https://github.com/nguyenhuy158" class="transition hover:text-indigo-600">github.com/nguyenhuy158</a>
+      <span class="hidden text-slate-300 sm:inline">|</span>
+      <span>Ho Chi Minh City, Vietnam</span>
+    </div>
+  </header>
+
+  <section class="mt-6 avoid-break">
+    <h2 class="section-title">Giới thiệu</h2>
+    <p class="text-sm leading-6 text-slate-700">
+      TODO: 2–3 câu tóm tắt — số năm kinh nghiệm, mảng mạnh nhất, thứ đang tìm kiếm.
+    </p>
+  </section>
+
+  <section class="mt-6">
+    <h2 class="section-title">Kinh nghiệm</h2>
+
+    <div class="avoid-break mb-5">
+      <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
+        <h3 class="m-0 text-base font-semibold">Chức danh — Công ty</h3>
+        <span class="text-xs text-slate-500">MM/YYYY – Hiện tại</span>
+      </div>
+      <ul class="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-700">
+        <li>TODO: việc đã làm + kết quả đo được (con số càng tốt).</li>
+        <li>TODO: công nghệ chính đã dùng.</li>
+      </ul>
+    </div>
+
+    <div class="avoid-break mb-5">
+      <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
+        <h3 class="m-0 text-base font-semibold">Chức danh — Công ty trước</h3>
+        <span class="text-xs text-slate-500">MM/YYYY – MM/YYYY</span>
+      </div>
+      <ul class="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-700">
+        <li>TODO</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="mt-6 avoid-break">
+    <h2 class="section-title">Kỹ năng</h2>
+    <dl class="grid grid-cols-1 gap-x-6 gap-y-2 text-sm sm:grid-cols-[140px_1fr]">
+      <dt class="font-semibold text-slate-600">Ngôn ngữ</dt>
+      <dd class="m-0 text-slate-700">TODO: Python, JavaScript/TypeScript, ...</dd>
+      <dt class="font-semibold text-slate-600">Backend</dt>
+      <dd class="m-0 text-slate-700">TODO: Odoo, FastAPI, Hono, PostgreSQL, ...</dd>
+      <dt class="font-semibold text-slate-600">DevOps</dt>
+      <dd class="m-0 text-slate-700">TODO: Docker, NixOS, Cloudflare Workers, CI/CD, ...</dd>
+    </dl>
+  </section>
+
+  <section class="mt-6">
+    <h2 class="section-title">Dự án</h2>
+    <div class="avoid-break mb-4">
+      <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
+        <h3 class="m-0 text-base font-semibold">Tên dự án</h3>
+        <a href="#" class="text-xs text-indigo-600">link</a>
+      </div>
+      <p class="mt-1 text-sm leading-6 text-slate-700">TODO: 1–2 câu mô tả + stack.</p>
+    </div>
+  </section>
+
+  <section class="mt-6 avoid-break">
+    <h2 class="section-title">Học vấn</h2>
+    <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
+      <h3 class="m-0 text-base font-semibold">Trường — Ngành</h3>
+      <span class="text-xs text-slate-500">YYYY – YYYY</span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="no-print py-6 text-center text-xs text-slate-400">
+  Cập nhật lần cuối: <span id="updated">—</span>
+</footer>
+
+<script>
+  document.getElementById('updated').textContent = document.lastModified;
+</script>
+
+</body>
+
+</html>
