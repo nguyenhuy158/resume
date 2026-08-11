@@ -36,8 +36,10 @@
 
   <!-- Chọn ngôn ngữ: 2 nút phân đoạn, trạng thái hiện tại thấy ngay -->
   <div class="flex overflow-hidden rounded-full border border-slate-300 text-xs font-semibold">
-    <button type="button" data-lang="en" class="lang-btn min-w-11 px-3 py-2 transition sm:py-1.5">EN</button>
-    <button type="button" data-lang="vi" class="lang-btn min-w-11 border-l border-slate-300 px-3 py-2 transition sm:py-1.5">VI</button>
+    <button type="button" data-lang="en" aria-label="English"
+      class="lang-btn min-w-11 px-3 py-2 text-base leading-5 transition sm:py-1.5">🇬🇧</button>
+    <button type="button" data-lang="vi" aria-label="Tiếng Việt"
+      class="lang-btn min-w-11 border-l border-slate-300 px-3 py-2 text-base leading-5 transition sm:py-1.5">🇻🇳</button>
   </div>
 
   <button onclick="window.print()"
@@ -195,10 +197,11 @@
     });
     document.querySelectorAll('.lang-btn').forEach((btn) => {
       const active = btn.dataset.lang === lang;
-      btn.classList.toggle('bg-indigo-600', active);
-      btn.classList.toggle('text-white', active);
-      btn.classList.toggle('text-slate-600', !active);
-      btn.classList.toggle('hover:bg-slate-100', !active);
+      // Cờ giữ nguyên màu khi đang chọn, làm xám và mờ khi không chọn.
+      btn.classList.toggle('bg-indigo-50', active);
+      btn.classList.toggle('grayscale', !active);
+      btn.classList.toggle('opacity-50', !active);
+      btn.classList.toggle('hover:opacity-100', !active);
       btn.setAttribute('aria-pressed', String(active));
     });
     localStorage.setItem(STORAGE_KEY, lang);
