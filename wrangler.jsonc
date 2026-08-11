@@ -13,6 +13,10 @@
     {
       "pattern": "resume.huyab.click",
       "custom_domain": true
+    },
+    {
+      "pattern": "cv.huyab.click",
+      "custom_domain": true
     }
   ]
 }
