@@ -32,30 +32,26 @@
 <body class="m-0 bg-slate-100 font-sans text-slate-800 antialiased">
 
 <!-- Thanh công cụ: ẩn khi in -->
-<div class="no-print sticky top-0 z-10 flex justify-end gap-2 bg-slate-100/80 px-4 py-3 backdrop-blur">
+<div class="no-print sticky top-0 z-10 flex items-center justify-end gap-2 border-b border-slate-200 bg-white/90 px-4 py-2.5 backdrop-blur">
+
+  <!-- Chọn ngôn ngữ: 2 nút phân đoạn, trạng thái hiện tại thấy ngay -->
+  <div class="flex overflow-hidden rounded-full border border-slate-300 text-xs font-semibold">
+    <button type="button" data-lang="en" class="lang-btn px-3 py-1.5 transition">EN</button>
+    <button type="button" data-lang="vi" class="lang-btn border-l border-slate-300 px-3 py-1.5 transition">VI</button>
+  </div>
+
   <button onclick="window.print()"
-    class="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow transition hover:bg-indigo-700"
+    class="rounded-full bg-indigo-600 px-4 py-1.5 text-xs font-semibold text-white shadow-sm transition hover:bg-indigo-700 sm:text-sm"
     data-i18n="print">Print / Save PDF</button>
 </div>
 
-<!-- Nút đổi ngôn ngữ, neo mép phải màn hình -->
-<button id="lang-toggle" type="button"
-  class="no-print fixed right-0 top-1/2 z-20 flex -translate-y-1/2 items-center gap-2 rounded-l-full bg-amber-600 py-3 pl-4 pr-5 text-sm font-semibold text-white shadow-lg transition hover:bg-amber-700">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 shrink-0">
-    <path d="M4 9h13l-3-3" />
-    <path d="M20 15H7l3 3" />
-  </svg>
-  <span id="lang-label">VI</span>
-</button>
-
-<main class="sheet mx-auto max-w-[900px] bg-white px-6 py-8 shadow-sm sm:px-10 sm:py-12">
+<main class="sheet mx-auto max-w-[900px] bg-white px-5 py-6 shadow-sm sm:px-10 sm:py-12">
 
   <header class="border-b-2 border-slate-200 pb-5">
     <h1 class="m-0 text-3xl font-bold uppercase tracking-wide sm:text-[34px]">Nguyen Gia Huy</h1>
     <div class="mt-1 text-base text-slate-500 sm:text-lg" data-i18n="role">Backend Developer &middot; DevOps</div>
 
-    <div class="mt-4 flex flex-col gap-2 text-sm leading-6 text-slate-600 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4">
+    <div class="mt-3 flex flex-col gap-y-0.5 text-[13px] leading-6 text-slate-600 sm:mt-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4 sm:text-sm">
       <a href="mailto:huy.ntq02@gmail.com" class="transition hover:text-indigo-600">huy.ntq02@gmail.com</a>
       <span class="hidden text-slate-300 sm:inline">|</span>
       <a href="tel:+84000000000" class="transition hover:text-indigo-600">+84 000 000 000</a>
@@ -197,17 +193,21 @@
       const value = dict[el.dataset.i18n];
       if (value !== undefined) el.textContent = value;
     });
-    // Nút hiển thị ngôn ngữ sẽ chuyển sang, không phải ngôn ngữ hiện tại.
-    document.getElementById('lang-label').textContent = lang === 'en' ? 'VI' : 'EN';
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      const active = btn.dataset.lang === lang;
+      btn.classList.toggle('bg-indigo-600', active);
+      btn.classList.toggle('text-white', active);
+      btn.classList.toggle('text-slate-600', !active);
+      btn.classList.toggle('hover:bg-slate-100', !active);
+      btn.setAttribute('aria-pressed', String(active));
+    });
     localStorage.setItem(STORAGE_KEY, lang);
   }
 
-  let current = localStorage.getItem(STORAGE_KEY) === 'vi' ? 'vi' : 'en';
-  applyLang(current);
+  applyLang(localStorage.getItem(STORAGE_KEY) === 'vi' ? 'vi' : 'en');
 
-  document.getElementById('lang-toggle').addEventListener('click', () => {
-    current = current === 'en' ? 'vi' : 'en';
-    applyLang(current);
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.addEventListener('click', () => applyLang(btn.dataset.lang));
   });
 
   document.getElementById('updated').textContent = document.lastModified;
