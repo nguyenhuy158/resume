@@ -7,8 +7,8 @@ Live: https://resume.huyab.click
 ## Local
 
 ```sh
-npm install
-npm run dev      # http://localhost:8787
+pnpm install
+pnpm dev      # http://localhost:8787
 ```
 
 Edit `public/index.html` — all content lives there. Sections marked `TODO` need real content.
@@ -20,7 +20,7 @@ Deploys automatically via Cloudflare Workers Builds on push to `main` (connect t
 Manual deploy:
 
 ```sh
-npm run deploy
+pnpm deploy
 ```
 
 ## Print to PDF
