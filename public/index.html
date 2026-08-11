@@ -141,7 +141,7 @@
     <h2 class="section-title" data-i18n="skillsTitle">Skills</h2>
     <dl class="grid grid-cols-1 gap-x-6 gap-y-1 text-[13px] sm:grid-cols-[140px_1fr] sm:gap-y-2 sm:text-sm">
       <dt class="font-semibold text-slate-600" data-i18n="skillLangs">Languages</dt>
-      <dd class="m-0 text-slate-700">TODO: Python, JavaScript/TypeScript, ...</dd>
+      <dd class="m-0 text-slate-700" data-i18n="skillLangsBody">JavaScript, HTML, CSS</dd>
       <dt class="font-semibold text-slate-600">Backend</dt>
       <dd class="m-0 text-slate-700">TODO: Odoo, FastAPI, Hono, PostgreSQL, ...</dd>
       <dt class="font-semibold text-slate-600">DevOps</dt>
@@ -153,19 +153,43 @@
     <h2 class="section-title" data-i18n="projectsTitle">Projects</h2>
     <div class="avoid-break mb-4">
       <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-        <h3 class="m-0 text-[15px] font-semibold sm:text-base" data-i18n="project1Title">Project name</h3>
-        <a href="#" class="text-xs text-indigo-600" data-i18n="linkLabel">link</a>
+        <h3 class="m-0 text-[15px] font-semibold sm:text-base" data-i18n="project1Title">Tech Hut — POS System</h3>
+        <a href="https://github.com/nguyenhuy158/nodejs-502070-2324-final-project" class="text-xs text-indigo-600" data-i18n="linkLabel">link</a>
       </div>
-      <p class="mt-1 text-[13px] leading-6 text-slate-700 sm:text-sm" data-i18n="project1Body">TODO: 1–2 sentences + stack.</p>
+      <p class="mt-1 text-[13px] leading-6 text-slate-700 sm:text-sm" data-i18n="project1Body">Point of Sale (POS) system for a retail store. Built APIs, routers and models as team leader. Stack: Node.js, Express, MongoDB, Datatables, HTML/CSS (MVC).</p>
+    </div>
+    <div class="avoid-break mb-4">
+      <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
+        <h3 class="m-0 text-[15px] font-semibold sm:text-base" data-i18n="project2Title">Call Mate — Real-time Caller</h3>
+        <a href="https://github.com/nguyenhuy158/nodejs-502070-2324-midterm-project" class="text-xs text-indigo-600" data-i18n="linkLabel">link</a>
+      </div>
+      <p class="mt-1 text-[13px] leading-6 text-slate-700 sm:text-sm" data-i18n="project2Body">Real-time calling website using WebRTC. Built routers and models, supported frontend, wrote documentation, deployed, as team leader. Stack: Express, Socket.io, WebRTC, MongoDB.</p>
+    </div>
+    <div class="avoid-break mb-4">
+      <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
+        <h3 class="m-0 text-[15px] font-semibold sm:text-base" data-i18n="project3Title">Tool Website for University Department</h3>
+        <a href="https://github.com/nguyenhuy158/autocreate-ds-don" class="text-xs text-indigo-600" data-i18n="linkLabel">link</a>
+      </div>
+      <p class="mt-1 text-[13px] leading-6 text-slate-700 sm:text-sm" data-i18n="project3Body">Fullstack tool that automates Excel document creation for a university department.</p>
     </div>
   </section>
 
   <section class="mt-5 avoid-break sm:mt-6">
     <h2 class="section-title" data-i18n="educationTitle">Education</h2>
     <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-      <h3 class="m-0 text-[15px] font-semibold sm:text-base" data-i18n="school">University — Major</h3>
-      <span class="text-xs text-slate-500">YYYY – YYYY</span>
+      <h3 class="m-0 text-[15px] font-semibold sm:text-base" data-i18n="school">Ton Duc Thang University — Software Engineering</h3>
+      <span class="text-xs text-slate-500">2020 – 2024</span>
     </div>
+    <p class="mt-1 text-[13px] leading-6 text-slate-700 sm:text-sm" data-i18n="schoolGpa">GPA: 8.41/10</p>
+  </section>
+
+  <section class="mt-5 avoid-break sm:mt-6">
+    <h2 class="section-title" data-i18n="awardsTitle">Awards</h2>
+    <ul class="list-disc space-y-1 pl-5 text-[13px] leading-6 text-slate-700 sm:text-sm">
+      <li data-i18n="award1">TDTU Entrance Scholarship, Academic Year 2020–2021</li>
+      <li data-i18n="award2">2nd prize, Integrated IT Knowledge Contest "Recursion Season 2"</li>
+      <li data-i18n="award3">English: PET (B1), equivalent to TOEIC 500</li>
+    </ul>
   </section>
 
 </main>
@@ -192,12 +216,22 @@
       job2Bullet1: 'TODO',
       skillsTitle: 'Skills',
       skillLangs: 'Languages',
+      skillLangsBody: 'JavaScript, HTML, CSS',
       projectsTitle: 'Projects',
-      project1Title: 'Project name',
-      project1Body: 'TODO: 1–2 sentences + stack.',
+      project1Title: 'Tech Hut — POS System',
+      project1Body: 'Point of Sale (POS) system for a retail store. Built APIs, routers and models as team leader. Stack: Node.js, Express, MongoDB, Datatables, HTML/CSS (MVC).',
+      project2Title: 'Call Mate — Real-time Caller',
+      project2Body: 'Real-time calling website using WebRTC. Built routers and models, supported frontend, wrote documentation, deployed, as team leader. Stack: Express, Socket.io, WebRTC, MongoDB.',
+      project3Title: 'Tool Website for University Department',
+      project3Body: 'Fullstack tool that automates Excel document creation for a university department.',
       linkLabel: 'link',
       educationTitle: 'Education',
-      school: 'University — Major',
+      school: 'Ton Duc Thang University — Software Engineering',
+      schoolGpa: 'GPA: 8.41/10',
+      awardsTitle: 'Awards',
+      award1: 'TDTU Entrance Scholarship, Academic Year 2020–2021',
+      award2: '2nd prize, Integrated IT Knowledge Contest "Recursion Season 2"',
+      award3: 'English: PET (B1), equivalent to TOEIC 500',
       updated: 'Last updated:',
     },
     vi: {
@@ -216,12 +250,22 @@
       job2Bullet1: 'TODO',
       skillsTitle: 'Kỹ năng',
       skillLangs: 'Ngôn ngữ',
+      skillLangsBody: 'JavaScript, HTML, CSS',
       projectsTitle: 'Dự án',
-      project1Title: 'Tên dự án',
-      project1Body: 'TODO: 1–2 câu mô tả + stack.',
+      project1Title: 'Tech Hut — Hệ thống bán hàng (POS)',
+      project1Body: 'Hệ thống bán hàng (POS) cho cửa hàng bán lẻ. Xây dựng API, router, model với vai trò trưởng nhóm. Stack: Node.js, Express, MongoDB, Datatables, HTML/CSS (MVC).',
+      project2Title: 'Call Mate — Gọi điện thời gian thực',
+      project2Body: 'Website gọi điện thời gian thực dùng WebRTC. Xây router, model, hỗ trợ frontend, viết tài liệu, deploy, với vai trò trưởng nhóm. Stack: Express, Socket.io, WebRTC, MongoDB.',
+      project3Title: 'Website công cụ cho khoa tại trường',
+      project3Body: 'Công cụ fullstack tự động tạo file Excel cho một khoa tại trường đại học.',
       linkLabel: 'liên kết',
       educationTitle: 'Học vấn',
-      school: 'Trường — Ngành',
+      school: 'Đại học Tôn Đức Thắng — Kỹ thuật Phần mềm',
+      schoolGpa: 'GPA: 8.41/10',
+      awardsTitle: 'Giải thưởng',
+      award1: 'Học bổng tuyển sinh TDTU, năm học 2020–2021',
+      award2: 'Giải nhì cuộc thi Kiến thức CNTT tổng hợp "Recursion Season 2"',
+      award3: 'Tiếng Anh: PET (B1), tương đương TOEIC 500',
       updated: 'Cập nhật lần cuối:',
     },
   };
