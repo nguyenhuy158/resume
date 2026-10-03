@@ -69,6 +69,16 @@ Use concise Conventional Commits, for example `feat: add LinkedIn to the
 contact line` or `fix: correct the full name`. Pull requests should include a
 short summary and a screenshot or PDF export of the visible change.
 
+## Ecosystem
+
+See the [huyab.click ecosystem map](https://github.com/nguyenhuy158/kit/blob/main/docs/ECOSYSTEM.md) for how all personal repos connect.
+
+- Kit packages: `@huyab/e2e` (`startServer`, `run`, harness in `e2e/`),
+  reusable CI `nguyenhuy158/kit/.github/workflows/check.yml@v0.1.0`. No
+  `@huyab/config` (no TypeScript or Biome here) and no `@huyab/sso` (public page).
+- Talks to: no repo at runtime (static assets, Tailwind CDN). mytools pings it
+  for uptime.
+
 ## Agent-Specific Instructions
 
 Keep responses short and focused. If a requirement is unclear, ask before making
