@@ -1,7 +1,7 @@
 // Read-only smoke for the static resume: GET requests only. The same suite
 // runs locally (`pnpm e2e`, via e2e/run.mjs) and against production
 // (`pnpm e2e:prod`, resume.huyab.click + cv.huyab.click).
-import { assert, BASE, expectStatus, finish, request, test } from "./harness.mjs";
+import { assert, BASE, expectStatus, finish, request, test } from "@huyab/e2e";
 
 /** Keys of one language block (`en: { ... }`) in the inline I18N dictionary. */
 function dictionaryKeys(html, lang) {

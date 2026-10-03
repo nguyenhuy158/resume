@@ -13,6 +13,7 @@
     "e2e:prod": "E2E_BASE_URL=https://resume.huyab.click node e2e/readonly-smoke.mjs && E2E_BASE_URL=https://cv.huyab.click node e2e/readonly-smoke.mjs"
   },
   "devDependencies": {
+    "@huyab/e2e": "github:nguyenhuy158/kit#v0.1.0&path:packages/e2e",
     "wrangler": "^4.120.1"
   }
 }

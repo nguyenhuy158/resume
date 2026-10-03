@@ -15,7 +15,7 @@ public/
                    # inline i18n script (EN/VI strings keyed by data-i18n)
 wrangler.jsonc     # Static-asset Worker: assets.directory ./public,
                    # 404-page handling, resume/cv.huyab.click custom domains
-e2e/
+e2e/               # Smoke suite (plain fetch, no browser; harness from @huyab/e2e)
   run.mjs          # `pnpm e2e`: start wrangler dev, run the smoke, stop it
   readonly-smoke.mjs # GET-only checks (render, EN/VI i18n keys, 404)
 ```
