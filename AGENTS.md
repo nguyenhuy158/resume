@@ -15,6 +15,9 @@ public/
                    # inline i18n script (EN/VI strings keyed by data-i18n)
 wrangler.jsonc     # Static-asset Worker: assets.directory ./public,
                    # 404-page handling, resume/cv.huyab.click custom domains
+e2e/
+  run.mjs          # `pnpm e2e`: start wrangler dev, run the smoke, stop it
+  readonly-smoke.mjs # GET-only checks (render, EN/VI i18n keys, 404)
 ```
 
 - All content and styling lives in `public/index.html`; there is no separate
@@ -31,11 +34,15 @@ wrangler.jsonc     # Static-asset Worker: assets.directory ./public,
 - `pnpm dev`: run `wrangler dev` on `http://localhost:8787`.
 - `pnpm build`: validate the Worker config and assets without deploying
   (`wrangler deploy --dry-run`, output in `dist/`).
+- `pnpm e2e`: start `wrangler dev` on port 8793 (`E2E_PORT`), run the smoke,
+  stop the server.
+- `pnpm e2e:prod`: run the same smoke against resume.huyab.click and
+  cv.huyab.click.
 - `pnpm deploy`: `wrangler deploy` for manual/local deploys only. Pushing to
   `main` deploys automatically through Cloudflare Workers Builds.
 
-Use `pnpm`, not `npm`, for this project. There are no lint/test scripts; this
-is a static HTML file.
+Use `pnpm`, not `npm`, for this project. There are no lint/unit-test scripts;
+this is a static HTML file.
 
 ## Coding Style & Naming Conventions
 
@@ -46,8 +53,13 @@ files. Name i18n keys in camelCase by section, for example `job1Bullet1`.
 
 ## Testing Guidelines
 
-No automated tests. Verify changes by opening `pnpm dev`, toggling EN/VI, and
-checking the print preview (A4, button hidden, no section split across pages).
+`e2e/readonly-smoke.mjs` fetches the page (plain fetch, no browser) and checks
+it renders, that every `data-i18n` key exists in both the EN and VI
+dictionaries, and that unknown paths 404. It is GET-only, so the same suite runs
+locally (`pnpm e2e`, CI `e2e` job) and against production (`pnpm e2e:prod`).
+Layout is not covered: verify visual changes by opening `pnpm dev`, toggling
+EN/VI, and checking the print preview (A4, button hidden, no section split
+across pages).
 
 ## Commit & Pull Request Guidelines
 
