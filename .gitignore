@@ -1,3 +1,20 @@
+# Dependencies
 node_modules/
+.pnpm-store/
+
+# Build output
+dist/
 .wrangler/
-.dev.vars
+coverage/
+
+# Environment / secrets
+.env*
+.dev.vars*
+
+# Logs
+*.log
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
