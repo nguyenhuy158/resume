@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "wrangler dev",
     "build": "wrangler deploy --dry-run --outdir dist",
+    "check": "pnpm build",
     "deploy": "wrangler deploy",
     "e2e": "node e2e/run.mjs",
     "e2e:prod": "E2E_BASE_URL=https://resume.huyab.click node e2e/readonly-smoke.mjs && E2E_BASE_URL=https://cv.huyab.click node e2e/readonly-smoke.mjs"

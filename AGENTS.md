@@ -34,6 +34,8 @@ e2e/               # Smoke suite (plain fetch, no browser; harness from @huyab/e
 - `pnpm dev`: run `wrangler dev` on `http://localhost:8787`.
 - `pnpm build`: validate the Worker config and assets without deploying
   (`wrangler deploy --dry-run`, output in `dist/`).
+- `pnpm check`: alias of `pnpm build`; the step the kit reusable CI always
+  runs.
 - `pnpm e2e`: start `wrangler dev` on port 8793 (`E2E_PORT`), run the smoke,
   stop the server.
 - `pnpm e2e:prod`: run the same smoke against resume.huyab.click and
