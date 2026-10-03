@@ -29,6 +29,8 @@ wrangler.jsonc     # Static-asset Worker: assets.directory ./public,
 
 - `pnpm install`: install `wrangler`.
 - `pnpm dev`: run `wrangler dev` on `http://localhost:8787`.
+- `pnpm build`: validate the Worker config and assets without deploying
+  (`wrangler deploy --dry-run`, output in `dist/`).
 - `pnpm deploy`: `wrangler deploy` for manual/local deploys only. Pushing to
   `main` deploys automatically through Cloudflare Workers Builds.
 
