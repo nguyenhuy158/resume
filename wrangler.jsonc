@@ -11,11 +11,11 @@
   },
   "routes": [
     {
-      "pattern": "resume.huyab.click",
+      "pattern": "resume.huyab.cfd",
       "custom_domain": true
     },
     {
-      "pattern": "cv.huyab.click",
+      "pattern": "cv.huyab.cfd",
       "custom_domain": true
     }
   ]
