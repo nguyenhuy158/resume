@@ -2,7 +2,7 @@
 
 Personal resume/CV — single static HTML page (Tailwind CDN), served by a Cloudflare Worker with static assets.
 
-Live: https://resume.huyab.click
+Live: https://resume.huyab.cfd
 
 ## Local
 

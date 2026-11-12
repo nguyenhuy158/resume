@@ -2,8 +2,8 @@
 
 ## Project Structure & Module Organization
 
-Personal resume/CV, live at <https://resume.huyab.click> (also
-`cv.huyab.click`). It is a single static HTML page styled with Tailwind via
+Personal resume/CV, live at <https://resume.huyab.cfd> (also
+`cv.huyab.cfd`). It is a single static HTML page styled with Tailwind via
 CDN, served by a Cloudflare Worker as pure static assets. There is no build
 step, no framework, no components and no templating.
 
@@ -14,7 +14,7 @@ public/
   index.html       # All content, styling (Tailwind CDN + print CSS) and the
                    # inline i18n script (EN/VI strings keyed by data-i18n)
 wrangler.jsonc     # Static-asset Worker: assets.directory ./public,
-                   # 404-page handling, resume/cv.huyab.click custom domains
+                   # 404-page handling, resume/cv.huyab.cfd custom domains
 e2e/               # Smoke suite (plain fetch, no browser; harness from @huyab/e2e)
   run.mjs          # `pnpm e2e`: start wrangler dev, run the smoke, stop it
   readonly-smoke.mjs # GET-only checks (render, EN/VI i18n keys, 404)
@@ -38,8 +38,8 @@ e2e/               # Smoke suite (plain fetch, no browser; harness from @huyab/e
   runs.
 - `pnpm e2e`: start `wrangler dev` on port 8793 (`E2E_PORT`), run the smoke,
   stop the server.
-- `pnpm e2e:prod`: run the same smoke against resume.huyab.click and
-  cv.huyab.click.
+- `pnpm e2e:prod`: run the same smoke against resume.huyab.cfd and
+  cv.huyab.cfd.
 - `pnpm deploy`: `wrangler deploy` for manual/local deploys only. Pushing to
   `main` deploys automatically through Cloudflare Workers Builds.
 
@@ -71,7 +71,7 @@ short summary and a screenshot or PDF export of the visible change.
 
 ## Ecosystem
 
-See the [huyab.click ecosystem map](https://github.com/nguyenhuy158/kit/blob/main/docs/ECOSYSTEM.md) for how all personal repos connect.
+See the [huyab.cfd ecosystem map](https://github.com/nguyenhuy158/kit/blob/main/docs/ECOSYSTEM.md) for how all personal repos connect.
 
 - Kit packages: `@huyab/e2e` (`startServer`, `run`, harness in `e2e/`),
   reusable CI `nguyenhuy158/kit/.github/workflows/check.yml@v0.1.0`. No
